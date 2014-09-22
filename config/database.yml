@@ -1,0 +1,17 @@
+development: &common
+  adapter: postgresql
+  sequel_adapter: postgres
+  encoding: utf8
+  reconnect: false
+  database: friend_list_dev
+  pool: 5
+  username: postgres
+  password: 123456
+  host: localhost
+
+test:
+  <<: *common
+  database: friend_list_test
+
+# Matching environments specified in this file will override the above.
+<%= IO.read('config/database.local.yml') if File.exists?('config/database.local.yml') %>

@@ -1,1 +1,4 @@
-%h4 Members
+.main-container{ 'ng-controller' => 'membersController', 'ng-init' => 'init()' }
+  %h4 Members
+  %ul{ 'ng-repeat' => 'member in members' }
+    %li {{member.name}}

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
   root 'homepage#index'
-  get '/members', to: 'homepage#show_members', as: 'members'
+  resources :members
+  get '/get_members', to: 'homepage#show_members'
 end

@@ -1,0 +1,12 @@
+.member-container
+  .topbar-member
+    .col-md-3
+      %h4 #{ @member.name }
+    .col-md-3
+      %select.form-control
+        %option{ value: 'one' } First
+        %option{ value: 'two' } Second
+    .col-md-3
+      %input.form-control{ placeholder: 'Search friend', type: 'text' }
+    .col-md-3
+      = link_to 'Delete Member', member_path(@member), confirm: 'Are you sure?', method: :delete, class: 'btn btn-danger delete-btn'

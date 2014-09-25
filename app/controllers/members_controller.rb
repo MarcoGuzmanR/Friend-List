@@ -4,6 +4,10 @@ class MembersController < ApplicationController
     redirect_to root_path
   end
 
+  def show
+    @member = Member.find(params[:id])
+  end
+
   private
 
   def member_params

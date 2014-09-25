@@ -9,4 +9,5 @@
 
   .members-list
     %ul{ 'ng-repeat' => 'member in members | filter:memberText '}
-      %li {{member.name}}
+      %li.members
+        %a{ href: 'members/{{ member.id }}' } {{ member.name }}

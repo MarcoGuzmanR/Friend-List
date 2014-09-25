@@ -1,11 +1,7 @@
 class MembersController < ApplicationController
   def create
-    @member = Member.new(member_params)
-    if @member.save!
-      render status: 200
-    else
-      render status: 500
-    end
+    @member = Member.create!(member_params)
+    redirect_to root_path
   end
 
   private
@@ -16,8 +12,6 @@ class MembersController < ApplicationController
     values = JSON.parse(values)
     params[:member] = values
 
-    params.require(:member).permit(
-      :name,
-      :email)
+    params.require(:member).permit(:name, :email)
   end
 end

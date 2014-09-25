@@ -23,10 +23,12 @@ app.controller('membersController', ['$scope', '$http', '$modal', function($scop
 
   var ModalInstanceCtrl = function($scope, $modalInstance) {
     $scope.addMember = function() {
+      var token = $('meta[name="csrf-token"]').attr('content');
       $http({
         method: 'post',
         url: '/members',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded',
+                   'X-CSRF-Token': token },
         data: { name: 'Marco Guzman', email: 'ganondorf28@gmail.com' }
       }).success(function(result) {
         $modalInstance.dismiss('cancel');

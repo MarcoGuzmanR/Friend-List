@@ -19,5 +19,11 @@ group :test, :development do
   gem 'factory_girl_rails'
 end
 
+group :production do
+  gem 'rails_12factor'
+end
+
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'spring', group: :development
+
+ruby '2.1.3'

@@ -31,7 +31,6 @@ app.controller('friendsController', ['$scope', '$http', '$modal', function($scop
   var ModalInstanceCtrl = ['$scope', '$modalInstance', function($scope, $modalInstance) {
     $scope.addFriend = function() {
       var token = $('meta[name="csrf-token"]').attr('content');
-      console.log($scope.member_id);
       $http({
         method: 'post',
         url: '/friends',

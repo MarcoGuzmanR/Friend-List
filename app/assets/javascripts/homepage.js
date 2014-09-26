@@ -35,7 +35,7 @@ app.controller('membersController', ['$scope', '$http', '$modal', function($scop
     });
   }
 
-  var ModalInstanceCtrl = function($scope, $modalInstance) {
+  var ModalInstanceCtrl = ['$scope', '$modalInstance', function($scope, $modalInstance) {
     $scope.addMember = function() {
       var token = $('meta[name="csrf-token"]').attr('content');
       $http({
@@ -55,5 +55,5 @@ app.controller('membersController', ['$scope', '$http', '$modal', function($scop
     $scope.cancel = function() {
       $modalInstance.dismiss('cancel');
     };
-  };
+  }];
 }]);

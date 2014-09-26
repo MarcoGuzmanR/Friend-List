@@ -1,4 +1,4 @@
-.member-container
+.member-container{ 'ng-controller' => 'friendsController' }
   .topbar-member
     .col-md-3
       %h4 #{ @member.name }
@@ -9,4 +9,4 @@
     .col-md-3
       %input.form-control{ placeholder: 'Search friend', type: 'text' }
     .col-md-3
-      = link_to 'Delete Member', member_path(@member), confirm: 'Are you sure?', method: :delete, class: 'btn btn-danger delete-btn'
+      %button.btn.btn-primary.add-member-btn{ type: 'button', 'ng-click' => "showModal(#{ @member.id })" } Add New Friend

@@ -4,8 +4,6 @@
       %h4 Members
     .col-md-4
       %input.form-control{ placeholder: 'Search', type: 'text', 'ng-model' => 'memberText' }
-    .col-md-4
-      %button.btn.btn-primary.add-member-btn{ type: 'button', 'ng-click' => 'showModal()' } Add New Member
 
   .members-list
     %ul{ 'ng-repeat' => 'member in members | filter:memberText '}

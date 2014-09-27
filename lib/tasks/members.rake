@@ -12,7 +12,7 @@ namespace :create_members_with_friends do
     member1.friends.create!(name: 'Albert Einstein',      email: 'albert.einstein@friendlist.com')
 
     member2.friends.create!(name: 'Rupert Grint',         email: 'ruper.grint@friendlist.com')
-    member2.friends.create!(name: 'Bonny Wright',         email: 'bonnie.wright@friendlist.com')
+    member2.friends.create!(name: 'Bonnie Wright',         email: 'bonnie.wright@friendlist.com')
 
     member3.friends.create!(name: 'Novak Djokovic',       email: 'novak.djokovic@friendlist.com')
     member3.friends.create(name: 'Stan Wawrinka',        email: 'stan.wawrinka@friendlist.com')

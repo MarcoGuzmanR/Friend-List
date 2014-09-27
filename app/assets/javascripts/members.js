@@ -50,6 +50,15 @@ app.controller('friendsController', ['$scope', '$http', '$modal', function($scop
       $modalInstance.dismiss('cancel');
     };
   }];
+
+  $scope.loadFriends = function(member_id) {
+    $http({
+      method: 'get',
+      url: '/members/' + member_id + '.json'
+    }).success(function (data) {
+      $scope.friends = data.friends;
+    });
+  }
 }]);
 
 

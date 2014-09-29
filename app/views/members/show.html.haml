@@ -1,17 +1,20 @@
 .member-container{ 'ng-controller' => 'friendsController' }
   .topbar-member
     .col-md-3
-      %h4 #{ @member.name }
+      %h3 #{ @member.name }
     .col-md-3
       %select.form-control
         %option{ value: 'one' } First
         %option{ value: 'two' } Second
     .col-md-3
-      %input.form-control{ placeholder: 'Search friend', type: 'text', 'ng-model' => 'friendText'}
+      %input.form-control{ placeholder: 'Search friend by email', type: 'text', 'ng-model' => 'friendText'}
     .col-md-3
-      %button.btn.btn-primary.add-member-btn{ type: 'button', 'ng-click' => "showModal(#{ @member.id })" } Add New Friend
+      %button.btn.btn-primary.add-friend-btn{ type: 'button', 'ng-click' => "showModal(#{ @member.id })" } Add New Friend
 
   .friends-list{ 'ng-init' => "loadFriends(#{ @member.id })" }
     %ul{ 'ng-repeat' => 'friend in friends | filter:friendText '}
       %li.friends
-        {{ friend.name }}
+        %h4
+          {{ friend.name }}
+        %p
+          {{ friend.email }}

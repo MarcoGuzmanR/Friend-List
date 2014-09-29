@@ -1,7 +1,7 @@
 .member-container{ 'ng-controller' => 'friendsController' }
   .topbar-member
     .col-md-3
-      %h3 #{ @member.name }
+      %h3.member-name #{ @member.name }
     .col-md-3
       %select.form-control
         %option{ value: 'one' } First

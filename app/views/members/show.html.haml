@@ -7,7 +7,7 @@
         %option{ value: 'one' } First
         %option{ value: 'two' } Second
     .col-md-3
-      %input.form-control{ placeholder: 'Search friend by email', type: 'text', 'ng-model' => 'friendText'}
+      %input.form-control{ id: 'friendInputText', placeholder: 'Search friend by email', type: 'text', 'ng-model' => 'friendText'}
     .col-md-3
       %button.btn.btn-primary.add-friend-btn{ type: 'button', 'ng-click' => "showModal(#{ @member.id })" } Add New Friend
 

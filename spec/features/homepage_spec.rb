@@ -7,7 +7,15 @@ feature 'Display the homepage' do
   scenario 'Show all members', :js do
     visit root_path
     expect(page).to have_content 'Friend List'
-    expect(page).to have_content 'John Doe'
-    expect(page).to have_content 'Jane Doe'
+    expect(page).to have_content member.name
+    expect(page).to have_content member2.name
+  end
+
+  scenario 'Show a specific member', :js do
+    visit root_path
+    expect(page).to have_content 'Friend List'
+    fill_in 'memberInputText', with: 'Jane'
+    expect(page).not_to have_content member.name
+    expect(page).to have_content member2.name
   end
 end

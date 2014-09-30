@@ -1,9 +1,9 @@
 .main-container{ 'ng-controller' => 'membersController', 'ng-init' => 'init()' }
   .topbar-member
     .col-md-4
-      %h4 Members
+      %h3.main-title Members
     .col-md-4
-      %input.form-control{ placeholder: 'Search', type: 'text', 'ng-model' => 'memberText' }
+      %input.form-control{ id: 'memberInputText', placeholder: 'Search', type: 'text', 'ng-model' => 'memberText' }
 
   .members-list
     %ul{ 'ng-repeat' => 'member in members | filter:memberText '}

@@ -50,5 +50,5 @@ with some seed values
 
 Execute **rails server** and voilà
 
-To run the tests you should execute *rake spec*. The green dots mean that the
+To run the tests you should execute **rake spec**. The green dots mean that the
 tests passed and the red ones mean that failed.

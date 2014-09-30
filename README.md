@@ -48,7 +48,7 @@ create_members_with_friends:create_members** to create the database of the
 project, run the migrations (create the tables with the fields) and fill them
 with some seed values
 
-Execute *rails server* and voilà
+Execute **rails server** and voilà
 
 To run the tests you should execute *rake spec*. The green dots mean that the
 tests passed and the red ones mean that failed.
